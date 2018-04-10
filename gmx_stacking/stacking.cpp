@@ -179,11 +179,11 @@ void stacking::initOptions(gmx::IOptionsContainer *options, gmx::TrajectoryAnaly
     
     options->addOption(SelectionOption("ref")
                        .storeVector(&ref_).required().multiValue()
-                       .description("Reference Group of benzenes to calculate angle and distance"));
+                       .description("Reference Groups of benzenes to calculate angle and distance"));
     
     options->addOption(SelectionOption("sel")
                        .storeVector(&sel_).required().multiValue()
-                       .description("Selection Group of benzenes to calculate angle and distance"));
+                       .description("Selection Groups of benzenes to calculate angle and distance"));
     
     options->addOption(DoubleOption("temperature").store(&temperature_).defaultValue(298)
                        .description("Temperature in K for energy calculation"));
