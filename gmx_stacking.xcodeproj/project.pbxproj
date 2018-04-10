@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		33622D4C207BB1EE00E26EC7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33622D4B207BB1EE00E26EC7 /* main.cpp */; };
+		33622D54207BB22F00E26EC7 /* stacking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33622D52207BB22F00E26EC7 /* stacking.cpp */; };
+		33622D56207C6A3900E26EC7 /* libgromacs.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33622D55207C6A3900E26EC7 /* libgromacs.2.4.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		33622D48207BB1EE00E26EC7 /* gmx_stacking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gmx_stacking; sourceTree = BUILT_PRODUCTS_DIR; };
 		33622D4B207BB1EE00E26EC7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		33622D52207BB22F00E26EC7 /* stacking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stacking.cpp; sourceTree = "<group>"; };
+		33622D53207BB22F00E26EC7 /* stacking.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stacking.hpp; sourceTree = "<group>"; };
+		33622D55207C6A3900E26EC7 /* libgromacs.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgromacs.2.4.0.dylib; path = ../../../../usr/local/Cellar/gromacs/2016.4/lib/libgromacs.2.4.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33622D56207C6A3900E26EC7 /* libgromacs.2.4.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				33622D4A207BB1EE00E26EC7 /* gmx_stacking */,
 				33622D49207BB1EE00E26EC7 /* Products */,
+				33622D55207C6A3900E26EC7 /* libgromacs.2.4.0.dylib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				33622D4B207BB1EE00E26EC7 /* main.cpp */,
+				33622D52207BB22F00E26EC7 /* stacking.cpp */,
+				33622D53207BB22F00E26EC7 /* stacking.hpp */,
 			);
 			path = gmx_stacking;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33622D4C207BB1EE00E26EC7 /* main.cpp in Sources */,
+				33622D54207BB22F00E26EC7 /* stacking.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +243,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/gromacs/2016.4/lib;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/gromacs/2016.4/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/gromacs/2016.4/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +254,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/gromacs/2016.4/lib;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/gromacs/2016.4/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/gromacs/2016.4/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
