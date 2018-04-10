@@ -59,8 +59,8 @@ private:
     
     AnalysisDataAverageModulePointer avem_probability_;
     
-    t_topology     *top_;
-    t_atoms         atoms_;
+    //t_topology     *top_;
+    //t_atoms         atoms_;
     
     
     std::string     fnEnergySurface_;

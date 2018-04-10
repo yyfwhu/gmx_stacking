@@ -146,7 +146,7 @@ void stacking::initOptions(gmx::IOptionsContainer *options, gmx::TrajectoryAnaly
         "on each group pair between ref and sel."
     };
     
-    settings->setFlag(TrajectoryAnalysisSettings::efRequireTop);
+    //settings->setFlag(TrajectoryAnalysisSettings::efRequireTop);
     
     settings->setHelpText(desc);
     
@@ -191,8 +191,8 @@ void stacking::initOptions(gmx::IOptionsContainer *options, gmx::TrajectoryAnaly
 
 void stacking::initAnalysis(const gmx::TrajectoryAnalysisSettings &settings, const gmx::TopologyInformation &top)
 {
-    atoms_ = top.topology()->atoms;
-    top_   = top.topology();
+    //atoms_ = top.topology()->atoms;
+    //top_   = top.topology();
     
     // initial data set columns and rows
     
